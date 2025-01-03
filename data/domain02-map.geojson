@@ -1,0 +1,82 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"country": "China",
+				"average_actual_price": 21684.339339339338
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": []
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"country": "Finland",
+				"average_actual_price": 3398.7
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": []
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"country": "India",
+				"average_actual_price": 3592.52
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": []
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"country": "South Korea",
+				"average_actual_price": 30286.676470588234
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": []
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"country": "United Arab Emirates",
+				"average_actual_price": 1649.0
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": []
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"country": "United States of America",
+				"average_actual_price": 44244.36440677966
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": []
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"country": "United Kingdom",
+				"average_actual_price": 28624.0
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": []
+			}
+		}
+	]
+}
