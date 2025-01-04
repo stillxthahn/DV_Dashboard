@@ -1,13 +1,13 @@
 (function () {
  const margin = { top: 50, right: 20, bottom: 50, left: 70 };
- const width = 700;
+ const width = 600;
  const height = 500;
 
  const svg = d3
   .select("#domain02-map")
   .append("svg")
   .attr("width", width)
-  .attr("height", height);
+  .attr("height", height + 30); // Tăng thêm 100px cho khoảng trống ở dưới
 
  const projection = d3
   .geoNaturalEarth1()
@@ -85,93 +85,55 @@
     d3.max(geojsonData.features, (f) => f.properties.average_actual_price),
    ])
    .range(["#ffcccc", "#cc0000"]);
+  const legendHeight = 20;
+  const legendWidth = 300;
 
-  // Tạo legend
-  // const legendWidth = 300;
-  // const legendHeight = 20;
+  const legendMarginLeft = 50; // Khoảng cách từ bên trái
+  const legend = svg
+   .append("g")
+   .attr(
+    "transform",
+    `translate(${legendMarginLeft}, ${400 + margin.top + 20})`
+   );
 
-  // const legend = svg
-  //  .append("g")
-  //  .attr("transform", `translate(0, ${600 + 250})`);
+  const legendScale = d3
+   .scaleLinear()
+   .domain(colorScale.domain())
+   .range([0, legendWidth]);
 
-  // const legendScale = d3
-  //  .scaleLinear()
-  //  .domain(colorScale.domain())
-  //  .range([0, legendWidth]);
+  const legendAxis = d3
+   .axisBottom(legendScale)
+   .ticks(5)
+   .tickFormat((d) => d.toFixed(2));
 
-  // const legendAxis = d3
-  //  .axisBottom(legendScale)
-  //  .ticks(5)
-  //  .tickFormat((d) => d.toFixed(2));
+  const gradient = svg
+   .append("defs")
+   .append("linearGradient")
+   .attr("id", "legend-gradient-domain02")
+   .attr("x1", "0%")
+   .attr("x2", "100%")
+   .attr("y1", "0%")
+   .attr("y2", "0%");
 
-  // const gradient = svg
-  //  .append("defs")
-  //  .append("linearGradient")
-  //  .attr("id", "legend-gradient")
-  //  .attr("x1", "0%")
-  //  .attr("x2", "100%")
-  //  .attr("y1", "0%")
-  //  .attr("y2", "0%");
+  gradient
+   .append("stop")
+   .attr("offset", "0%")
+   .attr("stop-color", colorScale(colorScale.domain()[0]));
 
-  // gradient
-  //  .append("stop")
-  //  .attr("offset", "0%")
-  //  .attr("stop-color", colorScale(colorScale.domain()[0]));
+  gradient
+   .append("stop")
+   .attr("offset", "100%")
+   .attr("stop-color", colorScale(colorScale.domain()[1]));
 
-  // gradient
-  //  .append("stop")
-  //  .attr("offset", "100%")
-  //  .attr("stop-color", colorScale(colorScale.domain()[1]));
+  legend
+   .append("rect")
+   .attr("width", legendWidth)
+   .attr("height", legendHeight)
+   .style("fill", "url(#legend-gradient-domain02)");
 
-  // legend
-  //  .append("rect")
-  //  .attr("width", legendWidth)
-  //  .attr("height", legendHeight)
-  //  .style("fill", "url(#legend-gradient)");
-
-  // legend
-  //  .append("g")
-  //  .attr("transform", `translate(0, ${legendHeight})`)
-  //  .call(legendAxis);
+  legend
+   .append("g")
+   .attr("transform", `translate(0, ${legendHeight})`)
+   .call(legendAxis);
  });
-
- svg
-  .selectAll("path")
-  .on("click", function (event, d) {
-   const selectedCountry = d.properties.name; // Lấy tên quốc gia khi nhấn vào
-   console.log("click", selectedCountry);
-
-   // Lọc dữ liệu theo quốc gia
-   const filteredData = data.filter((d) => d.country === selectedCountry);
-
-   // Cập nhật bar chart với dữ liệu đã lọc
-   updateBarChart(filteredData);
-  })
-  .on("mouseout", function () {
-   // Hiển thị lại tất cả các brand khi không chọn quốc gia
-   updateBarChart(data);
-  });
-
- // Hàm cập nhật bar chart
- function updateBarChart(filteredData) {
-  // Cập nhật Rating Bar Chart
-  yScaleRating.domain([0, d3.max(filteredData, (d) => d.rating)]);
-  ratingSvg
-   .selectAll(".bar")
-   .data(filteredData)
-   .transition()
-   .duration(500)
-   .attr("y", (d) => yScaleRating(d.rating))
-   .attr("height", (d) => chartHeight - yScaleRating(d.rating));
-
-  // Cập nhật Reviews Bar Chart
-  yScaleReviews.domain([0, d3.max(filteredData, (d) => d.reviews)]);
-  reviewsSvg
-   .selectAll(".bar")
-   .data(filteredData)
-   .transition()
-   .duration(500)
-   .attr("y", (d) => yScaleReviews(d.reviews))
-   .attr("height", (d) => chartHeight - yScaleReviews(d.reviews));
- }
 })();
