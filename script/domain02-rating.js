@@ -2,8 +2,6 @@
  d3
   .json("data/domain02-rating.json")
   .then(function (data) {
-   console.log("Data Loaded:", data); // Debug: Log the fetched data
-
    const margin = { top: 50, right: 20, bottom: 40, left: 100 };
    const width = 700 - margin.left - margin.right;
    const height = 500 - margin.top - margin.bottom;
