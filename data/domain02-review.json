@@ -1,118 +1,147 @@
 [
     {
         "Brand": "Apple",
+        "Country": "USA",
         "Reviews (Total Reviews)": 7086.666666666667
     },
     {
         "Brand": "BlackZone",
+        "Country": "India",
         "Reviews (Total Reviews)": 523.0
     },
     {
         "Brand": "CMF",
+        "Country": "United Kingdom",
         "Reviews (Total Reviews)": 441.0
     },
     {
         "Brand": "Google",
+        "Country": "USA",
         "Reviews (Total Reviews)": 1212.0
     },
     {
         "Brand": "Honor",
+        "Country": "China",
         "Reviews (Total Reviews)": 43.0
     },
     {
         "Brand": "I",
+        "Country": "China",
         "Reviews (Total Reviews)": 12.666666666666666
     },
     {
         "Brand": "IQOO",
+        "Country": "China",
         "Reviews (Total Reviews)": 90.7
     },
     {
         "Brand": "Infinix",
+        "Country": "China",
         "Reviews (Total Reviews)": 1907.5098039215686
     },
     {
         "Brand": "Jio",
+        "Country": "India",
         "Reviews (Total Reviews)": 68.0
     },
     {
         "Brand": "KARBONN",
+        "Country": "India",
         "Reviews (Total Reviews)": 65.66666666666667
     },
     {
         "Brand": "Kechaoda",
+        "Country": "China",
         "Reviews (Total Reviews)": 1202.3
     },
     {
         "Brand": "LAVA",
+        "Country": "India",
         "Reviews (Total Reviews)": 241.0625
     },
     {
         "Brand": "MOTOROLA",
+        "Country": "USA",
         "Reviews (Total Reviews)": 469.6666666666667
     },
     {
         "Brand": "Micromax",
+        "Country": "India",
         "Reviews (Total Reviews)": 2116.5
     },
     {
         "Brand": "Motorola",
+        "Country": "USA",
         "Reviews (Total Reviews)": 3171.706896551724
     },
     {
         "Brand": "Nokia",
+        "Country": "Finland",
         "Reviews (Total Reviews)": 1926.6666666666667
     },
     {
         "Brand": "Nothing",
+        "Country": "United Kingdom",
         "Reviews (Total Reviews)": 2998.0
     },
     {
         "Brand": "OPPO",
+        "Country": "China",
         "Reviews (Total Reviews)": 161.44444444444446
     },
     {
         "Brand": "OnePlus",
+        "Country": "China",
         "Reviews (Total Reviews)": 1169.2368421052631
     },
     {
         "Brand": "POCO",
+        "Country": "China",
         "Reviews (Total Reviews)": 1518.0483870967741
     },
     {
         "Brand": "REDMI",
+        "Country": "China",
         "Reviews (Total Reviews)": 846.125
     },
     {
         "Brand": "SAMSUNG",
+        "Country": "South Korea",
         "Reviews (Total Reviews)": 1108.61
     },
     {
         "Brand": "Samsung",
+        "Country": "South Korea",
         "Reviews (Total Reviews)": 13819.0
     },
     {
         "Brand": "Tecno",
+        "Country": "China",
         "Reviews (Total Reviews)": 27.73913043478261
     },
     {
         "Brand": "Vox",
+        "Country": "UAE",
         "Reviews (Total Reviews)": 6.0
     },
     {
         "Brand": "Xiaomi",
+        "Country": "China",
         "Reviews (Total Reviews)": 55.5
     },
     {
         "Brand": "itel",
+        "Country": "China",
         "Reviews (Total Reviews)": 92.3125
     },
     {
         "Brand": "realme",
+        "Country": "China",
         "Reviews (Total Reviews)": 610.75
     },
     {
         "Brand": "vivo",
+        "Country": "China",
         "Reviews (Total Reviews)": 2910.230769230769
     }
 ]
